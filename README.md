@@ -19,4 +19,7 @@ Databases (Firebase Firestore,)
 Project Management (git, Github)
 Design (Figma, Canva )
 Deployment (Firebase, Vercel ,huggingface ,railway)
+
+
+<a href = "https://linkedin.com/in/Muhammadaliakmal"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
 ![Thanks](https://github.com/user-attachments/assets/c79cc9e1-ae85-4f43-8998-aad91b574533)
