@@ -1,67 +1,3 @@
-
-Claude finished the response
-Nice — enjoy the new profile. 🚀
-
-If you want to iterate later, a few easy knobs:
-
-Palette — swap 
-#00E5FF / 
-#FF2FD0 / 
-#7C6CFF throughout the SVGs for a different vibe (amber + teal reads more "terminal," green + black more "Matrix")
-Speed — every dur="Xs" controls one animation; bump the glitch layers from 6s to 10s if the flicker feels busy
-Name length — if the banner text ever looks tight, drop font-size="52" to around 44
-Ping me if the snake workflow gives you trouble or you want the featured project cards swapped for something custom.
-
-now tell me how to put files
-
-
-Deliberated file upload methods and platform constraints
-Deliberated file upload methods and platform constraints
-You need the 3 SVGs sitting at assets/banner.svg, assets/divider.svg, assets/footer.svg inside your MuhammedAli-Ai/MuhammedAli-Ai repo. Since SVGs are just text, the create-file method is the most reliable.
-
-Option A — GitHub website (recommended)
-Do this three times, once per file:
-
-Open github.com/MuhammedAli-Ai/MuhammedAli-Ai
-Click Add file → Create new file
-In the filename box type exactly:
-   assets/banner.svg
-The / auto-creates the folder — you'll see it split into breadcrumbs. That's correct.
-4. Open the downloaded banner.svg, select all, copy, paste into the big editor box
-5. Scroll down → Commit changes
-
-Repeat with assets/divider.svg and assets/footer.svg.
-
-To open an SVG as text: right-click it → Open with → Notepad (or VS Code). Double-clicking opens it in a browser, which shows the picture, not the code.
-
-Option B — drag and drop upload
-Repo → Add file → Upload files
-Drag all 3 SVGs in at once
-Commit
-This drops them in the repo root, so afterwards change every assets/banner.svg in your README to just banner.svg (same for divider and footer). Slightly messier, but faster.
-
-Option C — git command line
-bash
-cd path/to/MuhammedAli-Ai
-mkdir assets
-# copy the 3 SVGs into the assets folder
-git add assets
-git commit -m "Add animated profile SVGs"
-git push
-Verify it worked
-Go to your profile page github.com/MuhammedAli-Ai. The banner should render and animate. If you see a broken-image icon instead:
-
-Check the file is at assets/banner.svg, not Assets/banner.svg — GitHub paths are case-sensitive
-Click the file in your repo; if GitHub shows the picture, the SVG is valid and the issue is just the path in your README
-Hard-refresh with Ctrl + Shift + R — GitHub caches images aggressively
-give me all in one only ne read me not all this
-
-
-Devised single-file solution using hosted image services
-Devised single-file solution using hosted image services
-Understood — one README, nothing else to upload. Worth knowing why the tradeoff exists: GitHub strips raw <svg> code from markdown, so a custom hand-coded banner has to live as a file. A single-file README means everything comes from hosted image URLs instead. Here's that version, tuned to the same neon palette:
-
-markdown
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=blur&color=0:04060C,50:1A0B3D,100:2C0B5A&height=210&section=header&text=MUHAMMED%20ALI%20AKMAL&fontSize=46&fontColor=00E5FF&animation=twinkling&fontAlignY=38&desc=FULL-STACK%20ENGINEER%20//%20AI%20SYSTEMS%20//%20WEB%203.0&descAlignY=58&descSize=16" width="100%" />
@@ -83,19 +19,16 @@ markdown
 
 <img align="right" width="300" src="https://media2.giphy.com/media/cUAGuLiEcTBwRfkAQq/giphy.gif?cid=ecf05e474bjrlcjt6yc7w0t20djokbtl9i4e9iqkie9anv8i&rid=giphy.gif&ct=s" />
 
-```ts
-const operator: Developer = {
-  handle:    "MuhammedAli-Ai",
-  location:  "Pakistan 🇵🇰",
-  role:      "Freelance Full-Stack Engineer",
-  education: "BS Computer Science // undergrad",
-  stack:     ["MERN", "Next.js", "Python", "FastAPI"],
-  building:  ["AI agents", "RAG pipelines", "SaaS"],
-  learning:  ["Web 3.0", "Metaverse", "Smart Contracts"],
-  openTo:    "open-source collab & freelance builds",
-  motto:     "ship fast, refactor smarter ⚡",
-};
-```
+<table>
+  <tr><td><code>handle</code></td><td><b>MuhammedAli-Ai</b></td></tr>
+  <tr><td><code>location</code></td><td>Pakistan 🇵🇰</td></tr>
+  <tr><td><code>role</code></td><td>Freelance Full-Stack Engineer</td></tr>
+  <tr><td><code>education</code></td><td>BS Computer Science // undergrad</td></tr>
+  <tr><td><code>stack</code></td><td>MERN · Next.js · Python · FastAPI</td></tr>
+  <tr><td><code>building</code></td><td>AI agents · RAG pipelines · SaaS</td></tr>
+  <tr><td><code>learning</code></td><td>Web 3.0 · Metaverse · Smart Contracts</td></tr>
+  <tr><td><code>status</code></td><td>⚡ ship fast, refactor smarter</td></tr>
+</table>
 
 **`▸`** 🎓 &nbsp;Undergraduate in **BS Computer Science**
 **`▸`** 🌱 &nbsp;Currently decoding **Web 3.0 & Metaverse Technologies**
@@ -198,15 +131,3 @@ const operator: Developer = {
 <img src="https://capsule-render.vercel.app/api?type=blur&color=0:2C0B5A,50:1A0B3D,100:04060C&height=150&section=footer&text=THANKS%20FOR%20VISITING&fontSize=26&fontColor=00E5FF&animation=twinkling&fontAlignY=70" width="100%" />
 
 </div>
-Paste it straight into your README — nothing else to set up. The snake animation is gone since it needs a workflow file; say the word if you want it back.
-
-
-
-You’ve used 75% of your weekly limit
-Get more usage
-
-
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
